@@ -1,38 +1,39 @@
-import 'package:firebase_core/firebase_core.dart';
+import 'package:carro_compras/arquitectura/bloc/carritoBloc/carrito_event.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'aplicacion/home_page.dart';
-import 'arquitectura/preferencias/preferencias_usuario.dart';
+import 'arquitectura/bloc/productos_bloc.dart';
+import 'arquitectura/servicios/productos_repositorio.dart';
 
-void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  final PreferenciasUsuario preferenciasUsuario = new PreferenciasUsuario();
-  await preferenciasUsuario.initPrefs();
-  Firebase.initializeApp().then((value) => 
-  runApp(MyApp()));
-  
-}
 
-class MyApp extends StatefulWidget {
-  @override
-  _MyAppState createState() => _MyAppState();
-}
 
-class _MyAppState extends State<MyApp> {
-  final GlobalKey<NavigatorState> navigatorKey =
-      new GlobalKey<NavigatorState>();
- 
+void main() =>  runApp(
+      MultiBlocProvider(
+          providers: [
+            BlocProvider<ProductBloc>(
+              create: (context) =>
+                  ProductBloc(),
+            ),
+            BlocProvider<ProductosBloc>(create: (context) => ProductosBloc(productosRepository: ProductosRepository()),)
+
+          ],
+          child: MyApp()
+      )
+  );
+
+class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return
-      MaterialApp(
-            debugShowCheckedModeBanner: false,
-            initialRoute:  '/homeVehiculos',
-            navigatorKey: navigatorKey,
-            routes: {
-              '/homeVehiculos': (context) => HomePage()
-            },
-          );
+    return MaterialApp(
+      title: "Bloc App II",
+      theme: ThemeData(
+        primarySwatch: Colors.red,
+        accentColor: Colors.redAccent
+      ),
+      debugShowCheckedModeBanner: false,
+      home: HomePage(),
+    );
   }
 }
 
