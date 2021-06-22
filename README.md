@@ -1,5 +1,5 @@
 # Carrito Compras test
-ESta es una aplicacion construida en flutter la cual es un carrito de compras:
+Esta es una aplicacion construida en flutter la cual es un carrito de compras:
 
 Carrito : Muestra el carrito de compras con el total de productos el cual puede eliminar, agregar o vaciar el carrito de compras.
 Home : Muestra un  lista de productos las cuales se caragan desde firebase, se pueden añadir productos al carrito y ir al dicha vista.
@@ -19,7 +19,6 @@ Finalmente esta app es realizada solo para fines demostrativos.
 
 # Información Personal
 
-=100x20
 **Nombre**: Jeisson Santacruz.
 **Profesion **: Ingeniero de sistemas y ciencias de la computacion.
 ** Tecnologias** : Flutter, React Native, PHP, Node js, JavaScript, GraphQl.
