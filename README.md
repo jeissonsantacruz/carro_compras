@@ -1,16 +1,26 @@
-# carro_compras
+# Carrito Compras test
+ESta es una aplicacion construida en flutter la cual es un carrito de compras:
 
-A new Flutter project.
+Carrito : Muestra el carrito de compras con el total de productos el cual puede eliminar, agregar o vaciar el carrito de compras.
+Home : Muestra un  lista de productos las cuales se caragan desde firebase, se pueden añadir productos al carrito y ir al dicha vista.
 
-## Getting Started
+1. Consume los servicios de Firebase
+2. Utiliza patrones de desarrollo MVVM se utilizaró BLOC .
+3. Contiene una Clean Architecture por temas de escalabilidad.
 
-This project is a starting point for a Flutter application.
+Finalmente esta app es realizada solo para fines demostrativos.
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+# Screenshots
+![title](assets/images/S1.png ){:height="20%" width="20%"}
+![title](assets/images/S2.png){:height="20%" width="20%"}
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+
+# Información Personal
+
+=100x20
+**Nombre**: Jeisson Santacruz.
+**Profesion **: Ingeniero de sistemas y ciencias de la computacion.
+** Tecnologias** : Flutter, React Native, PHP, Node js, JavaScript, GraphQl.
+** Contacto** : jeissonsanta132@gmail.com
