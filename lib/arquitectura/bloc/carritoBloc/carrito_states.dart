@@ -1,8 +1,8 @@
 abstract class BlocEvent{}
 abstract class BlocState {}
-
-class LoadingState extends BlocState{}
-class FailedToLoadState extends BlocState {
+/* Clase que contiene los estados del Bloc Carrito de compras */
+class CargandoState extends BlocState{}
+class CarroNoCargadoState extends BlocState {
   Exception error;
-  FailedToLoadState({this.error});
+  CarroNoCargadoState({this.error});
 }

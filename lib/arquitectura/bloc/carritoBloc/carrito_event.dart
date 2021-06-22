@@ -1,46 +1,23 @@
 import 'package:carro_compras/dominio/modelos/productos_modelo.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
+
 
 import 'carrito_states.dart';
 
+/* Esta clase contiene la implementacion de los eventos del Bloc Carrito de Compras */
 
-
-class AddToCart extends BlocEvent {
+class AgregarCarro extends BlocEvent {
   Productos product;
-  AddToCart({this.product});
+ 
+  AgregarCarro({this.product});
 }
-class DelFromCart extends BlocEvent {
+class EliminarCarro extends BlocEvent {
   Productos product;
-  DelFromCart({this.product});
+  EliminarCarro({this.product});
 }
-class ClearCart extends BlocEvent {}
+class VaciarCarro extends BlocEvent {}
 class LoadedState extends BlocState {
   List<Productos> products;
   LoadedState({this.products});
 }
 
 
-class ProductBloc extends Bloc<BlocEvent, BlocState>{
-  ProductBloc() : super();
-
-  List<Productos> cartProducts = [];
-   @override
-  BlocState get initialState => LoadingState();
-
-  @override
-  Stream<BlocState> mapEventToState(BlocEvent event) async*{
-    yield LoadingState();
-    try{
-      if (event is AddToCart)
-        cartProducts.add(event.product);
-      if (event is DelFromCart)
-        cartProducts.remove(event.product);
-      if (event is ClearCart)
-        cartProducts = [];
-      yield LoadedState(products: cartProducts);
-    }
-    catch(e){
-      yield FailedToLoadState(error: e);
-    }
-  }
-}
