@@ -1,6 +1,6 @@
-
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+/* Esta clase contiene la implementacion del delegate del bloc */
 class SimpleBlocDelegate extends BlocDelegate {
   @override
   void onEvent(Bloc bloc, Object event) {

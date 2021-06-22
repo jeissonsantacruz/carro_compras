@@ -1,6 +1,6 @@
 part of 'productos_bloc.dart';
 
-
+/* Esta clase contiene la implementacion de los estados del Bloc Prodcutos */
 
 abstract class ProductoState extends Equatable {
   const ProductoState();
