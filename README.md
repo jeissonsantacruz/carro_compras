@@ -5,7 +5,7 @@ Carrito : Muestra el carrito de compras con el total de productos el cual puede 
 Home : Muestra un  lista de productos las cuales se caragan desde firebase, se pueden añadir productos al carrito y ir al dicha vista.
 
 1. Consume los servicios de Firebase
-2. Utiliza patrones de desarrollo MVVM se utilizaró BLOC .
+2. Utiliza patrones de desarrollo MVVM se utilizó BLOC .
 3. Contiene una Clean Architecture por temas de escalabilidad.
 
 Finalmente esta app es realizada solo para fines demostrativos.
